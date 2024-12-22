@@ -6,13 +6,13 @@ using namespace std;
 // Функция для вычисления факториала n
 double factorial(int n) 
 {
-    if (n == 0 || n == 1) 
+    double result = 1;
+    for (int i = 2; i <= n; ++i) 
     {
-        return 1;
+        result *= i;
     }
-    return n * factorial(n - 1);
+    return result;
 }
-
 // Рекурсивная функция для вычисления S
 double S(int n, double x) 
 {
